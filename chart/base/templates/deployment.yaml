@@ -22,6 +22,7 @@ metadata:
     app.openshift.io/runtime: {{ .Values.runtime }}
     {{- end}}
 spec:
+  progressDeadlineSeconds: 2000
   replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
